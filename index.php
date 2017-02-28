@@ -3,7 +3,7 @@
   <head>
     <title>Square</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -13,7 +13,7 @@
   <body>
 	<div class="wrapper container">
 		<header>
-			<a href="/"><img src="../images/logo.png" class="logo" alt="square logo"></a>
+			<a href="/"><img src="/images/logo.png" class="logo" alt="square logo"></a>
 			<form name="search" action="#" method="get" class="form-inline form-search pull-right">
 				<div class="input-group">
 					<label class="sr-only" for="searchInput">Поиск</label>
@@ -26,12 +26,12 @@
 		</header>
 		<nav class="navbar navbar-default">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="../index.php/">Новости</a></li>
-				<li><a href="../about.php/">О проекте</a></li>
-				<li><a href="../partners.php/">Партнёры</a></li>
-				<li><a href="../projects.php/">Проекты</a></li>
-				<li><a href="../careers.php/">Вакансии</a></li>
-				<li><a href="../contact.php/">Контакты</a></li>
+				<li class="active"><a href="/index.php/">Новости</a></li>
+				<li><a href="/about.php/">О проекте</a></li>
+				<li><a href="/partners.php/">Партнёры</a></li>
+				<li><a href="/projects.php/">Проекты</a></li>
+				<li><a href="/careers.php/">Вакансии</a></li>
+				<li><a href="/contact.php/">Контакты</a></li>
 			</ul>
 		</nav>
 		<div class="heading">
@@ -40,10 +40,10 @@
 		<div class="row">
 			<aside class="col-md-7">
 				<ul class="list-group submenu">
-					<li class="list-group-item"><a href="../profile.php/">Профиль</a></li>
-					<li class="list-group-item"><a href="../newmsg.php/">Написать сообщение</a></li>
-					<li class="list-group-item"><a href="../msg.php">Входящие сообщения</a></li>
-					<li class="list-group-item"><a href="../exit.php/">Выйти</a></li>
+					<li class="list-group-item"><a href="/profile.php/">Профиль</a></li>
+					<li class="list-group-item"><a href="/newmsg.php/">Написать сообщение</a></li>
+					<li class="list-group-item"><a href="/msg.php">Входящие сообщения</a></li>
+					<li class="list-group-item"><a href="/exit.php/">Выйти</a></li>
 				</ul>
 				<div class="panel panel-primary">
 					<div class="panel-heading">Моё рабочее место</div>
@@ -95,14 +95,14 @@
 					<h3>Карта сайта</h3>
 					<div class="row">
 						<div class="col-md-12">
-							<a href="../index.php/">Новости</a>
-							<a href="../about.php/">О проекте</a>
-							<a href="../services.php/">Партнёры</a>
+							<a href="/index.php/">Новости</a>
+							<a href="/about.php/">О проекте</a>
+							<a href="/services.php/">Партнёры</a>
 						</div>
 						<div class="col-md-12">
-							<a href="../partners.php/">Проекты</a>
-							<a href="../customers.php/">Вакансии</a>
-							<a href="../contact.php/">Контакты </a>
+							<a href="/partners.php/">Проекты</a>
+							<a href="/customers.php/">Вакансии</a>
+							<a href="/contact.php/">Контакты </a>
 						</div>
 					</div>
 				</div>
@@ -118,7 +118,7 @@
 					<a href="/rss/" class="social-icon-small rss"></a>
 				</div>
 				<div class="col-md-8 footer-logo">
-					<a href="/"><img src="../images/footer-logo.png" alt="Whitesquare logo"></a>
+					<a href="/"><img src="/images/footer-logo.png" alt="Whitesquare logo"></a>
 					<p>
 						Копирайт &copy; 2к17 square.
 						<a href="https://vk.com/icaxapi0_o">ICaxapI</a> сделяль
