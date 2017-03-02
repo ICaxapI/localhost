@@ -9,7 +9,7 @@
 			</div>
 		</div>
 	</form>
-</header>s
+</header>
 <nav class="navbar navbar-default">
 	<ul class="nav navbar-nav">
 		<li <?php if ($uri == "/index.php/") {echo 'class="active"';} ?>><a href="/index.php/">Новости</a></li>
@@ -21,5 +21,14 @@
 	</ul>
 </nav>
 <div class="heading">
-	<h1>О проекте</h1>
+<?php if ($uri == "/index.php/") {echo '<h1>Новости</h1>';} ?>
+<?php if ($uri == "/about.php/") {echo '<h1>О проекте</h1>';} ?>
+<?php if ($uri == "/partners.php/") {echo '<h1>Партнёры</h1>';} ?>
+<?php if ($uri == "/projects.php/") {echo '<h1>Проекты</h1>';} ?>
+<?php if ($uri == "/careers.php/") {echo '<h1>Вакансии</h1>';} ?>
+<?php if ($uri == "/contact.php/") {echo '<h1>Контакты</h1>';} ?>
+<?php if ($uri == "/profile.php/") {echo '<h1>Профиль</h1>';} ?>
+<?php if ($uri == "/newmsg.php/") {echo '<h1>Новое сообщение</h1>';} ?>
+<?php if ($uri == "/msg.php/") {echo '<h1>Сообщения</h1>';} ?>
+<?php if ($uri == "/exit.php/") {echo '<h1>Выйти</h1>';} ?>
 </div>

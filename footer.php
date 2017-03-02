@@ -28,7 +28,7 @@
 				<a href="/rss/" class="social-icon-small rss"></a>
 			</div>
 			<div class="col-md-8 footer-logo">
-				<a href="/"><img src="/images/footer-logo.png" alt="Whitesquare logo"></a>
+				<a href="/"><img src="/images/footer-logo.png" alt="square logo"></a>
 				<p>
 					Копирайт &copy; 2к17 square.
 					<a href="https://vk.com/icaxapi0_o">ICaxapI</a> сделяль
