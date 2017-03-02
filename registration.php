@@ -24,14 +24,26 @@
 				include 'aside.php'; 
 			?>
 			<section class="col-md-17">
-				<div class="jumbotron">
-					<blockquote>
-						<p>
-							&ldquo;Что Вы ожидали увидеть, заходя сюда? Этот сайт сделан за 5 дней, не стоит ожидать чего-то очень классного.&rdquo;
-						</p>
-						<small>Александр глазков, создатель сайта</small>
-					</blockquote>
-				</div>
+				<form action="/save_user.php/" method="post">
+					<div class="form-group">
+            			<div class="col-lg-10">
+		    				<label>Ваш логин:<br></label>
+		    				<input class="form-control" name="login" type="text" size="15" maxlength="15">
+		    			</div>
+		    		</div>
+					<div class="form-group">
+            			<div class="col-lg-10">
+						    <label>Ваш пароль:<br></label>
+						    <input class="form-control" name="password" type="password" size="15" maxlength="15">
+						</div>
+					</div>
+					<div class="form-group">
+            			<div class="col-lg-10">
+            				<br>
+		    				<input class="btn btn-primary" type="submit" name="submit" value="Зарегистрироваться">
+		    			</div>
+		    		</div>
+				</form>
 			</section>
 		</div>
 	</div>

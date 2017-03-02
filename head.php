@@ -31,4 +31,7 @@
 <?php if ($uri == "/newmsg.php/") {echo '<h1>Новое сообщение</h1>';} ?>
 <?php if ($uri == "/msg.php/") {echo '<h1>Сообщения</h1>';} ?>
 <?php if ($uri == "/exit.php/") {echo '<h1>Выйти</h1>';} ?>
+<?php if ($uri == "/") {echo '<h1>Новости</h1>';} ?>
+<?php if ($uri == "/login.php/") {echo '<h1>Войти</h1>';} ?>
+<?php if ($uri == "/registration.php/") {echo '<h1>Регистрация</h1>';} ?>
 </div>
