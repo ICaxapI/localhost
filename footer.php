@@ -1,4 +1,4 @@
-<footer>
+<footer class="modal-footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 sitemap">

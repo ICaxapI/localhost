@@ -22,6 +22,7 @@
         if ($myrow['password']==$password) {
             $_SESSION['login']=$myrow['login']; 
             $_SESSION['id']=$myrow['id'];
+            $_SESSION['page']=1;
             header('Refresh: 0; /index.php/');
         }
         else {

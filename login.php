@@ -26,19 +26,19 @@
 			<section class="col-md-17">
 				<form action="/testreg.php/" method="post">
           <div class="form-group">
-            <div class="col-lg-10">
+            <div class="col-lg-24">
     					<label>Ваш логин:<br></label>
     					<input class="form-control" name="login" type="text" size="15" maxlength="15">
             </div>
           </div>
           <div class="form-group">
-            <div class="col-lg-10">
+            <div class="col-lg-24">
     					<label>Ваш пароль:<br></label>
     					<input class="form-control" name="password" type="password" size="15" maxlength="15">
             </div>
           </div>
           <div class="form-group">
-            <div class="col-lg-10">
+            <div class="col-lg-24">
               <br>
         			<input class="btn btn-primary" type="submit" name="submit" value="Войти"></br>
     					<a href="reg.php">Зарегистрироваться</a>

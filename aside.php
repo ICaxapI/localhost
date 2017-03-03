@@ -20,4 +20,4 @@
 						<img src="/images/map.png" class="img-responsive" alt="Our offices">
 					</div>
 				</div>
-			</aside>'
+			</aside>

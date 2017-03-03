@@ -24,14 +24,62 @@
 				include 'aside.php'; 
 			?>
 			<section class="col-md-17">
-				<div class="jumbotron">
-					<blockquote>
-						<p>
-							&ldquo;Что Вы ожидали увидеть, заходя сюда? Этот сайт сделан за 5 дней, не стоит ожидать чего-то очень классного.&rdquo;
-						</p>
-						<small>Александр глазков, создатель сайта</small>
-					</blockquote>
+			<?php
+				if (!empty($_SESSION['login']) or !empty($_SESSION['id'])){ echo '<button type="button" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Добавить новость</button>';
+				}
+				require_once "bd.php";
+				$rqst = mysqli_query($db, "SELECT * FROM news");
+				$countContent = mysqli_num_rows( $rqst );
+				$count = 5;
+				$lastpage = 1;
+				$biasContent = $countContent;
+				while ($biasContent > $count) {
+					$biasContent = $biasContent - $count;
+					$lastpage = $lastpage + 1;
+				}
+				if($_SESSION['page'] >= 1) {
+					if ($_SESSION['page'] <= $lastpage){ 
+						$page = $_SESSION['page'];
+					} else {
+						$page = $lastpage;
+						$_SESSION['page'] = $lastpage;
+					}
+				} else {
+					$page = 1;
+					$_SESSION['page'] = 1;
+				}
+				if($_SESSION['page'] > $lastpage){
+					$page = $lastpage;
+					$_SESSION['page'] = $lastpage;
+				}
+				$start = ($countContent - ($page * 5));
+				if ($page != $lastpage){
+					$request = mysqli_query($db, "SELECT * FROM news ORDER BY id DESC LIMIT {$start}, {$count}");
+				} else {
+					$start = 0;
+					$request = mysqli_query($db, "SELECT * FROM news ORDER BY id DESC LIMIT {$start}, {$biasContent}");
+				}
+				while($row = mysqli_fetch_assoc($request)) {
+					echo '	<div class="jumbotron">
+								<blockquote>
+									<p>'.$row['id'].' '.$row['text'].'</p>';
+									echo "<small>".$row['author'].", ".$row['authortype'].", ".$row['time']."</small>
+								</blockquote>
+							</div>";
+				}
+			?>
+
+				<div class="row">
+					<form action="/changepage.php/" method="post">
+						<div class="col-md-12">
+							<input type="submit" name="nextbtn" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" value="Предыдущая страница">
+						</div>
+						<div class="col-md-12">
+							<input type="submit" name="prevbtn" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" value="Следующая страница">
+						</div>
+					</form>
 				</div>
+
 			</section>
 		</div>
 	</div>

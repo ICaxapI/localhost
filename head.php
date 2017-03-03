@@ -1,6 +1,6 @@
 <header>
 	<a href="/"><img src="../images/logo.png" class="logo" alt="square logo"></a>
-	<form name="search" action="#" method="get" class="form-inline form-search pull-right">
+	<!-- <form name="search" action="#" method="get" class="form-inline form-search pull-right">
 		<div class="input-group">
 			<label class="sr-only" for="searchInput">Поиск</label>
 			<input class="form-control" id="searchInput" type="text" name="search" placeholder="Поиск">
@@ -8,7 +8,7 @@
 				<button type="submit" class="btn btn-primary">GO</button>
 			</div>
 		</div>
-	</form>
+	</form> -->
 </header>
 <nav class="navbar navbar-default">
 	<ul class="nav navbar-nav">
@@ -19,6 +19,8 @@
 		<li <?php if ($uri == "/careers.php/") {echo 'class="active"';} ?>><a href="/careers.php/">Вакансии</a></li>
 		<li <?php if ($uri == "/contact.php/") {echo 'class="active"';} ?>><a href="/contact.php/">Контакты</a></li>
 	</ul>
+	<?php if (!empty($_SESSION['login']) or !empty($_SESSION['id'])){ echo '<a href="/profile.php/" style="padding-top: 10px; padding-right: 10px;" class="pull-right">Вы вошли как '.$_SESSION['login'].'</a>'; }?>
+	
 </nav>
 <div class="heading">
 <?php if ($uri == "/index.php/") {echo '<h1>Новости</h1>';} ?>
