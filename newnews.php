@@ -24,8 +24,10 @@
 				include 'aside.php'; 
 			?>
 			<section class="col-md-17">
-				<form>
-					<input type="textarea" class="form-control" name="textarea">
+				<form action="/newnewsadd.php/" method="post">
+					<label>Текст новости<br></label>
+					<textarea maxlength="1000" name="area" class="form-control" rows="5" cols="30" style=" max-width: 100%; min-width: 100%;"></textarea>
+					<input type="submit" name="sumbit" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" value="Отправить">
 				</form>
 			</section>
 		</div>

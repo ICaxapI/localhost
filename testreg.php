@@ -23,6 +23,7 @@
             $_SESSION['login']=$myrow['login']; 
             $_SESSION['id']=$myrow['id'];
             $_SESSION['page']=1;
+            $_SESSION['authortype']=$myrow['authortype'];
             header('Refresh: 0; /index.php/');
         }
         else {

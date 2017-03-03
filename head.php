@@ -19,7 +19,7 @@
 		<li <?php if ($uri == "/careers.php/") {echo 'class="active"';} ?>><a href="/careers.php/">Вакансии</a></li>
 		<li <?php if ($uri == "/contact.php/") {echo 'class="active"';} ?>><a href="/contact.php/">Контакты</a></li>
 	</ul>
-	<?php if (!empty($_SESSION['login']) or !empty($_SESSION['id'])){ echo '<a href="/profile.php/" style="padding-top: 10px; padding-right: 10px;" class="pull-right">Вы вошли как '.$_SESSION['login'].'</a>'; }?>
+	<?php if (!empty($_SESSION['login']) or !empty($_SESSION['id'])){ echo '<div class="row"><div class="col-md-6 col-sm-24 pull-right"><a href="/profile.php/" style="padding-top: 10px; padding-right: 5px;" class="pull-right">Вы вошли как '.$_SESSION['login'].'</a></div></div>'; }?>
 	
 </nav>
 <div class="heading">
@@ -36,4 +36,5 @@
 <?php if ($uri == "/") {echo '<h1>Новости</h1>';} ?>
 <?php if ($uri == "/login.php/") {echo '<h1>Войти</h1>';} ?>
 <?php if ($uri == "/registration.php/") {echo '<h1>Регистрация</h1>';} ?>
+<?php if ($uri == "/newnews.php/") {echo '<h1>Новая новость</h1>';} ?>
 </div>

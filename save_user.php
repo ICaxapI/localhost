@@ -20,9 +20,11 @@
     }
     $result2 = mysqli_query ($db,"INSERT INTO users (login,password) VALUES('$login','$password')");
     if ($result2=='TRUE'){
-    	echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'>Главная страница</a>";
+        header('Refresh: 2; /index.php/');
+    	echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт.";
     }
  	else {
+        header('Refresh: 2; /index.php/');
     	echo "Ошибка! Вы не зарегистрированы.";
     }
-    ?>
+?>

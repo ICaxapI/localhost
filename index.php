@@ -1,6 +1,7 @@
 <?php
 	$uri = $_SERVER['REQUEST_URI'];
 	session_start();
+	if ($_SERVER['REQUEST_URI'] == "/"){ header('Refresh: 0; /index.php/'); }
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +26,7 @@
 			?>
 			<section class="col-md-17">
 			<?php
-				if (!empty($_SESSION['login']) or !empty($_SESSION['id'])){ echo '<button type="button" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Добавить новость</button>';
+				if (!empty($_SESSION['login']) or !empty($_SESSION['id'])){ echo '<a href="/newnews.php/" type="button" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Добавить новость</a>';
 				}
 				require_once "bd.php";
 				$rqst = mysqli_query($db, "SELECT * FROM news");
@@ -62,7 +63,7 @@
 				while($row = mysqli_fetch_assoc($request)) {
 					echo '	<div class="jumbotron">
 								<blockquote>
-									<p>'.$row['id'].' '.$row['text'].'</p>';
+									<p>'.$row['text'].'</p>';
 									echo "<small>".$row['author'].", ".$row['authortype'].", ".$row['time']."</small>
 								</blockquote>
 							</div>";
