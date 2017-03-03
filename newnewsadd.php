@@ -30,7 +30,6 @@
     }
 
     $text = stripslashes($text);
-    $text = htmlspecialchars($text);
  // подключаемся к базе
     include ("bd.php");
     $result = mysqli_query($db,"INSERT INTO news (text, author, authortype) VALUES ('$text', '$login', '$authortype')");
